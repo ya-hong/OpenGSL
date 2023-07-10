@@ -87,7 +87,7 @@ class Dataset:
             self.adj = self.adj.to(self.device)
             self.n_nodes = self.feats.shape[0]
             self.dim_feats = self.feats.shape[1]
-            self.n_edges = len(self.adj.coalesce().values())/2
+            self.n_edges = len(self.adj.coalesce().val)/2
             if feat_norm:
                 self.feats = normalize(self.feats, style='row')
                 exit(0)
